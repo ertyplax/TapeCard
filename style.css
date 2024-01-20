@@ -1,0 +1,207 @@
+@font-face {
+    font-family: Montserrat; src: url("Montserrat.ttf");
+}
+
+div {
+  align-items: center;
+}
+
+body {
+  justify-content: center;
+  font-family: Montserrat;
+}
+
+.cagotto {
+  color: black;
+  text-decoration: none;
+}
+
+.smerdo {
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+}
+
+.caption {
+  display: block;
+  text-decoration: none;
+}
+
+.content {
+  justify-content: flex-start;
+  font-size: large;
+}
+
+.box {
+  background-color: rgb(255, 255, 255);
+  margin-left: 5%;
+  margin-right: 5%;
+  height: auto;
+  width: auto;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.wrapper {
+  /*This part is important for centering*/
+  display: grid;
+  place-items: start;
+}
+
+.typing-demo {
+  width: 8ch;
+  animation: typing 2s steps(11), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+
+.bar {
+  &::after {
+    position: absolute;
+    content: "";
+    top: 15px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    transform: scale(0.9) translateZ(0);
+    filter: blur(15px);
+    background: linear-gradient(
+      to left,
+      #ff5770,
+      #e4428d,
+      #c42da8,
+      #9e16c3,
+      #6501de,
+      #9e16c3,
+      #c42da8,
+      #e4428d,
+      #ff5770
+    );
+    background-size: 200% 200%;
+    animation: animateGlow 3s linear infinite;
+  }
+}
+
+@keyframes animateGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+@keyframes animateGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+
+/* typing */
+
+@keyframes typing {
+  0%, 15% {content: ""}
+  1%, 14% {content: "e"}
+  2%, 13% {content: "er"}
+  3%, 12% {content: "ert"}
+  4%, 11% {content: "erty"}
+
+  17%, 44% {content: ""}
+  18%, 43% {content: "a"}
+  19%, 42% {content: "a d"}
+  20%, 41% {content: "a de"}
+  21%, 40% {content: "a dev"}
+  22%, 39% {content: "a dev"}
+  23%, 38% {content: "a deve"}
+  24%, 37% {content: "a devel"}
+  25%, 36% {content: "a develo"}
+  26%, 35% {content: "a develope"}
+  27%, 34% {content: "a developer";}
+
+  46%, 79% {content: ""}
+  47%, 78% {content: "a"}
+  48%, 77% {content: "a p"}
+  49%, 76% {content: "a ph"}
+  50%, 75% {content: "a pho"}
+  51%, 74% {content: "a phot"}
+  52%, 73% {content: "a photo"}
+  53%, 72% {content: "a photog"}
+  54%, 71% {content: "a photogr"}
+  55%, 70% {content: "a photogra"}
+  56%, 69% {content: "a photograp"}
+  57%, 68% {content: "a photograph"}
+  58%, 67% {content: "a photographe"}
+  59%, 66% {content: "a photographer"}
+
+
+  86%, 95% {content: ""}
+  87%, 94% {content: "a"}
+  88%, 94% {content: "a f"}
+  89%, 93% {content: "a fu"}
+  90%, 93% {content: "a fur"}
+  90%, 93% {content: "a furr"}
+  91%, 92% {content: "a furry"}
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typewriter {
+  --caret: currentcolor;
+}
+
+.typewriter::before {
+  content: "";
+  animation: typing 10s infinite;
+}
+
+.typewriter::after {
+  content: "";
+  border-right: 1px solid var(--caret);
+  animation: blink 0.5s linear infinite;
+}
+
+.typewriter.thick::after {
+  border-right: 1ch solid var(--caret);
+}
+
+.typewriter.nocaret::after {
+  border-right: 0;
+}
+
+
+@media (prefers-reduced-motion) {
+  .typewriter::after {
+    animation: none;
+  }
+
+  .typewriter::before {
+    content: "developer";
+    animation: sequencePopup 12s linear infinite;
+  }
+}
