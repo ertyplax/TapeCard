@@ -34,15 +34,31 @@ body {
 
 .box {
   background-color: rgb(255, 255, 255);
-  margin-left: 5%;
-  margin-right: 5%;
-  height: auto;
-  width: auto;
-  border-radius: 15px;
+  border-radius: 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  padding: 0.4em;
+  box-shadow: 0px 6px 17px rgb(5, 5, 5);
 }
+
+@media screen and (orientation: landscape) {
+  .box {
+
+    margin: auto;
+    max-width: 17em;
+  }
+}
+
+
+@media screen and (orientation: portrait) {
+  .box {
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+}
+
 
 
 .wrapper {
@@ -73,33 +89,29 @@ body {
 }
 
 
-.bar {
-  &::after {
-    position: absolute;
-    content: "";
-    top: 15px;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    transform: scale(0.9) translateZ(0);
-    filter: blur(15px);
-    background: linear-gradient(
-      to left,
-      #ff5770,
-      #e4428d,
-      #c42da8,
-      #9e16c3,
-      #6501de,
-      #9e16c3,
-      #c42da8,
-      #e4428d,
-      #ff5770
-    );
-    background-size: 200% 200%;
-    animation: animateGlow 3s linear infinite;
-  }
+.cssbg {
+  background: linear-gradient(270deg, #fc4a82, #e4428d, #c42da8, #9e16c3, #7a00ab);
+  background-size: 1200% 1200%;
+
+  -webkit-animation: AnimationName 10s ease infinite;
+  -moz-animation: AnimationName 10s ease infinite;
+  animation: AnimationName 10s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
 
 @keyframes animateGlow {
