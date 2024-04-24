@@ -38,6 +38,10 @@ body {
   justify-content: space-around;
 }
 
+.icon {
+  padding: 3px;
+}
+
 .box {
   background-color: rgb(255, 255, 255);
   border-radius: 16px;
