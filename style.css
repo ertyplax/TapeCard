@@ -32,6 +32,12 @@ body {
   font-size: large;
 }
 
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 .box {
   background-color: rgb(255, 255, 255);
   border-radius: 16px;
